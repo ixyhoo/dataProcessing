@@ -53,4 +53,33 @@ let data = [
     }
 ]
 
-console.log(data[2].pseudo );
+//console.log(data[2].pseudo );
+//les structure de controle
+//----------------------
+
+if(data[0].age > data[1].age){
+  //  console.log(data[0].pseudo + " est plus agé que " + data[1].pseudo);
+} else {
+   // console.log(data[1].pseudo + " est plus agé que " + data[0].pseudo);
+}
+
+//while
+
+let w = 0;
+while (w < 10) {
+    w++;
+    //console.log("la valeur de w est de " + w);
+}
+
+// do while
+//let d = 0;
+//do {
+  //  d++;
+    //console.log("la valeur de d est de " + d);
+//}while(d < 5);
+
+//for
+
+for(const user of data){
+    document.body.innerHTML += `<li>${user.pseudo} - ${user.age} ans</li>`
+}
