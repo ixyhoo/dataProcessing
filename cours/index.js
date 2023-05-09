@@ -81,5 +81,10 @@ while (w < 10) {
 //for
 
 for(const user of data){
-    document.body.innerHTML += `<li>${user.pseudo} - ${user.age} ans</li>`
+  //  document.body.innerHTML += `<li>${user.pseudo} à ${user.age} ans</li>`
+}
+
+for(let i = 0; i < data.length; i++){
+   // console.log(data[i].pseudo);
+   document.body.innerHTML += `<h2>${data[i].pseudo} à ${data[i].age}</h2>`
 }
