@@ -172,3 +172,19 @@ let newArray = [...array3, ...array4];
 //console.log(array3);
 
 // important
+
+let arrayNumber = [4, 200, 10, 20, 15];
+//console.log(arrayNumber.reduce.((x, y) => x / y));
+
+//Filter, sort, map
+
+//let supTen = arrayNumber.filter(number => number > 10);
+//console.log(supTen);
+
+//let sortArray = arrayNumber.sort((a, b ) => a - b );
+//console.log(sortArray);
+
+//let mapArray = arrayNumber.map(number => number * 2);
+//console.log(mapArray);
+
+// Méthodes Object
