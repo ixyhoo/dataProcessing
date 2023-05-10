@@ -141,3 +141,34 @@ let numberString = "42.12 est un nombre";
 
 // Méthodes Array
 
+let array3 = ["js", "php", "ruby"];
+let array4 = ["react", "laravel", "rails"];
+
+//console.log(array3.concat(array4));
+
+let newArray = [...array3, ...array4];
+//console.log(newArray);
+
+//console.log(array3.join(" & "));
+
+//console.log(newArray.slice(1, 3));
+//console.log(newArray.reverse());
+
+//array3.forEach((language, index) => {
+  //  console.log(index, language);})
+
+  //console.log(array3.every(language => language === "js"));
+  //console.log(array3.some(language => language === "js"));
+
+  //let shift = array3.shift();
+  //console.log(shift);
+
+//console.log(array3.pop());
+
+//console.log(array3.push("nodejs"));
+//console.log(array3);
+
+//let restArray = array3.splice(1, 2, "express", "angular");
+//console.log(array3);
+
+// important
