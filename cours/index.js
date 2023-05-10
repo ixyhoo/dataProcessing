@@ -1,10 +1,10 @@
 
-let body = document.querySelector("body");
+/*let body = document.querySelector("body");
 
 window.addEventListener("click", () => {
     body.classList.toggle("lightgreen")
    
-})
+})*/
 
 // rapel des types de données
 
@@ -86,5 +86,18 @@ for(const user of data){
 
 for(let i = 0; i < data.length; i++){
    // console.log(data[i].pseudo);
-   document.body.innerHTML += `<h2>${data[i].pseudo} à ${data[i].age}</h2>`
+   //document.body.innerHTML += `<h2>${data[i].pseudo} pratique ${data[i].technos.join(" & ")}</h2>`
 }
+
+document.body.addEventListener("click", e => {
+   
+    switch(e.target.id){
+        case "Js": document.body.style.background = "yellow";
+        break;
+        case "php": document.body.style.background = "blue";
+        break;
+        case "RoR": document.body.style.background = "red";
+        break;
+        default: null;
+    }
+})
