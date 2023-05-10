@@ -8,6 +8,8 @@ body {
   justify-content: center;
   overflow: hidden;
   font-size: 3rem;
+  background: black;
+  color: white;
 }
 #target {
   display: flex;
