@@ -188,3 +188,10 @@ let arrayNumber = [4, 200, 10, 20, 15];
 //console.log(mapArray);
 
 // Méthodes Object
+
+document.body.innerHTML = data.map(user =>
+    `<div class="card"><h2>${user.pseudo}</h2> 
+    <p>${user.age} ans </p> 
+    <p> ${user.technos.join(" ")}</p>
+    </div>`).join(" ");
+

@@ -5,3 +5,19 @@ body {
 body.lightgreen {
     background: lightgreen;
 }
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white ;
+}
+
+.card {
+    background: #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-align: center;
+
+
+}
