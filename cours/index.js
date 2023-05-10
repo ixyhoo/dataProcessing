@@ -101,3 +101,22 @@ document.body.addEventListener("click", e => {
         default: null;
     }
 })
+
+// Méthodes String
+
+let string2 = "je suis une chaine de caractère";
+
+//console.log(eval("1" + 2));
+//console.log(string.length);
+
+//console.log(string2.indexOf("chaine"));
+//console.log(string2.indexOf("z"));
+//let newString = string2.slice(2);
+//let newString = string2.slice(5, 22);
+
+//console.log(newString);
+//console.log(string2.split(" "));
+
+console.log(string2.toLowerCase());
+console.log(string2.toUpperCase());
+console.log(string2.replace("chaine", "femme"));
