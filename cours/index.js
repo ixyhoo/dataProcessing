@@ -117,6 +117,27 @@ let string2 = "je suis une chaine de caractère";
 //console.log(newString);
 //console.log(string2.split(" "));
 
-console.log(string2.toLowerCase());
-console.log(string2.toUpperCase());
-console.log(string2.replace("chaine", "femme"));
+//console.log(string2.toLowerCase());
+//console.log(string2.toUpperCase());
+//console.log(string2.replace("chaine", "femme"));
+
+// Méthodes Number
+
+let number2 = 42.1234;
+let numberString = "42.12 est un nombre";
+
+//console.log(number2.toFixed(0));
+//console.log(parseInt("43.12"));
+//console.log(parseInt(numberString ));
+//console.log(parseFloat(numberString ));
+
+//console.log(Math.PI);
+//console.log(Math.round(4.5));
+//console.log(Math.floor(4.9));
+//console.log(Math.ceil(4.1));
+//console.log(Math.pow(2, 7));
+//console.log(Math.sqrt(16));
+//console.log(Math.floor(Math.random() * 50) + 1);
+
+// Méthodes Array
+
