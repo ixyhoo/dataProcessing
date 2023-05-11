@@ -1,4 +1,3 @@
-
 /*let body = document.querySelector("body");
 
 window.addEventListener("click", () => {
@@ -18,89 +17,92 @@ let maVariable; // undefined
 let array = ["je", "suis", "un", "tableau"];
 console.log(array[1][0]);
 
-let array2 = ["ben", 24, [1, 2], {name: "fly"}]
+let array2 = ["ben", 24, [1, 2], { name: "fly" }];
 
 //console.log(array2[3].name);
 
 let objet = {
-    pseudo: "jojo",
-    age: 45,
-    technos: ["js", "react", "nodejs"],
-    admin: false,
-}
+  pseudo: "jojo",
+  age: 45,
+  technos: ["js", "react", "nodejs"],
+  admin: false,
+};
 
 //objet.name = "soso"
 //console.log(objet);
 
 let data = [
-    {
-        pseudo: "jojo",
-        age: 45,
-        technos: ["js", "react", "nodejs"],
-        admin: false,
-    },
-    {
-        pseudo: "titi",
-        age: 15,
-        technos: ["php", "laravel", "synfony"],
-        admin: false,
-    },
-    {
-        pseudo: "lulu",
-        age: 105,
-        technos: ["ruby", "rails", "stimulus"],
-        admin: false,
-    }
-]
+  {
+    pseudo: "jojo",
+    age: 45,
+    technos: ["js", "react", "nodejs"],
+    admin: false,
+  },
+  {
+    pseudo: "titi",
+    age: 15,
+    technos: ["php", "laravel", "synfony"],
+    admin: false,
+  },
+  {
+    pseudo: "lulu",
+    age: 105,
+    technos: ["ruby", "rails", "stimulus"],
+    admin: false,
+  },
+];
 
 //console.log(data[2].pseudo );
 //les structure de controle
 //----------------------
 
-if(data[0].age > data[1].age){
+if (data[0].age > data[1].age) {
   //  console.log(data[0].pseudo + " est plus agé que " + data[1].pseudo);
 } else {
-   // console.log(data[1].pseudo + " est plus agé que " + data[0].pseudo);
+  // console.log(data[1].pseudo + " est plus agé que " + data[0].pseudo);
 }
 
 //while
 
 let w = 0;
 while (w < 10) {
-    w++;
-    //console.log("la valeur de w est de " + w);
+  w++;
+  //console.log("la valeur de w est de " + w);
 }
 
 // do while
 //let d = 0;
 //do {
-  //  d++;
-    //console.log("la valeur de d est de " + d);
+//  d++;
+//console.log("la valeur de d est de " + d);
 //}while(d < 5);
 
 //for
 
-for(const user of data){
+for (const user of data) {
   //  document.body.innerHTML += `<li>${user.pseudo} à ${user.age} ans</li>`
 }
 
-for(let i = 0; i < data.length; i++){
-   // console.log(data[i].pseudo);
-   //document.body.innerHTML += `<h2>${data[i].pseudo} pratique ${data[i].technos.join(" & ")}</h2>`
+for (let i = 0; i < data.length; i++) {
+  // console.log(data[i].pseudo);
+  //document.body.innerHTML += `<h2>${data[i].pseudo} pratique ${data[i].technos.join(" & ")}</h2>`
 }
 
-document.body.addEventListener("click", e => {
-   
-    switch(e.target.id){
-        case "Js": document.body.style.background = "yellow";
-        break;
-        case "php": document.body.style.background = "blue";
-        break;
-        case "RoR": document.body.style.background = "red";
-        break;
-        default: null;
-    }
-})
+document.body.addEventListener("click", (e) => {
+  switch (e.target.id) {
+    case "Js":
+      document.body.style.background = "yellow";
+      break;
+    case "php":
+      document.body.style.background = "blue";
+      break;
+    case "RoR":
+      document.body.style.background = "red";
+      break;
+    default:
+      null;
+  }
+});
 
 // Méthodes String
 
@@ -155,13 +157,13 @@ let newArray = [...array3, ...array4];
 //console.log(newArray.reverse());
 
 //array3.forEach((language, index) => {
-  //  console.log(index, language);})
+//  console.log(index, language);})
 
-  //console.log(array3.every(language => language === "js"));
-  //console.log(array3.some(language => language === "js"));
+//console.log(array3.every(language => language === "js"));
+//console.log(array3.some(language => language === "js"));
 
-  //let shift = array3.shift();
-  //console.log(shift);
+//let shift = array3.shift();
+//console.log(shift);
 
 //console.log(array3.pop());
 
@@ -189,9 +191,14 @@ let arrayNumber = [4, 200, 10, 20, 15];
 
 // Méthodes Object
 
-document.body.innerHTML = data.map(user =>
-    `<div class="card"><h2>${user.pseudo}</h2> 
+document.body.innerHTML = data
+.filter((user) => user.age > 18)
+.sort((a, b) => b.age - a.age)
+  .map(
+    (user) =>
+      `<div class="card"><h2>${user.pseudo}</h2> 
     <p>${user.age} ans </p> 
     <p> ${user.technos.join(" ")}</p>
-    </div>`).join(" ");
-
+    </div>`
+  )
+  .join(" ");
