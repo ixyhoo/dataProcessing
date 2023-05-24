@@ -4,16 +4,32 @@ const dataUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const dataNumbers = "0123456789";
 const dataSymbols = "!@#$%^&*()_+=-{}[];':\"\\|,.<>?/~`";
 const rangeValue = document.getElementById("password-length");
-console.log(rangeValue.value);
-
+const passwordOutput = document.getElementById("password-output");  
+ 
 function generatePassword() {
     let data = []
+    let password = "";  
     if (lowercase.checked) data.push(...dataLowercase);
     if (uppercase.checked) data.push(...dataUppercase);
     if (numbers.checked) data.push(...dataNumbers);
     if (symbols.checked) data.push(...dataSymbols);
 
-    console.log(data[Math.floor(Math.random() * data.length)]);
+    if (data.length === 0) {
+        alert("Please select at least one option");
+        return;
+    }
+
+    for (i = 0; i < rangeValue.value; i++){
+        password += data[Math.floor(Math.random() * data.length)];
+    
+    }
+
+    passwordOutput.value = password;
+
+    passwordOutput.select();
+    document.execCommand("copy");
+
+    generateButton.textContent = "Copied!";
 }
 
 generateButton.addEventListener("click", generatePassword);
