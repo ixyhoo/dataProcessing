@@ -279,3 +279,8 @@ h3.forEach((language) => {
 })
 
 //mles regex
+
+let mail = "ixyhoo@outlook.fr"
+
+//console.log(mail.search(/y/));
+console.log(mail.replace);
