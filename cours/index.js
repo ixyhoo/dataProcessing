@@ -269,3 +269,13 @@ let arrayNumber = [4, 200, 10, 20, 15];
   console.log(dateDestructuring(iso));
 
   //les Datatsets
+const h3js = document.getElementById("Js");
+console.log(h3js.dataset.lang);
+
+const h3 = document.querySelectorAll("h3");
+
+h3.forEach((language) => {
+  console.log(language.dataset.lang);
+})
+
+//mles regex
