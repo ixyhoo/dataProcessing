@@ -1,9 +1,11 @@
 body {
-    background:green;
+    background:green; 
+    text-align: center;
 }
 
 body.lightgreen {
     background: lightgreen;
+   
 }
 
 * {

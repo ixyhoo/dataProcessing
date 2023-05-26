@@ -203,4 +203,31 @@ let arrayNumber = [4, 200, 10, 20, 15];
  // )
  // .join(" ");
 
- les dates
+ //les dates
+ // date classique
+ let date = new Date();
+ console.log(date);
+
+ //Timestamp 
+
+ let timestamp = Date.parse(date);
+ console.log(timestamp);
+
+ // isoString
+  let iso = date.toISOString();
+
+ function dateParser(chaine){
+  let newDate = new Date(chaine).toLocaleDateString("fr-FR", 
+  {year: "numeric",
+  month: "long", 
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric"
+})
+  return newDate
+ }
+
+ console.log(dateParser(date));
+ console.log(dateParser(timestamp));
+ console.log(dateParser(iso));
