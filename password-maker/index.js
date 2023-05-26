@@ -30,6 +30,10 @@ function generatePassword() {
     document.execCommand("copy");
 
     generateButton.textContent = "Copied!";
+
+    setTimeout(() => {
+        generateButton.textContent = "Generate Password"; 
+    }, 2000);
 }
 
 generateButton.addEventListener("click", generatePassword);
