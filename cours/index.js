@@ -191,14 +191,16 @@ let arrayNumber = [4, 200, 10, 20, 15];
 
 // Méthodes Object
 
-document.body.innerHTML = data
-.filter((user) => user.age > 18)
-.sort((a, b) => b.age - a.age)
-  .map(
-    (user) =>
-      `<div class="card"><h2>${user.pseudo}</h2> 
-    <p>${user.age} ans </p> 
-    <p> ${user.technos.join(" ")}</p>
-    </div>`
-  )
-  .join(" ");
+//document.body.innerHTML = data
+//.filter((user) => user.age > 18)
+//.sort((a, b) => b.age - a.age)
+//  .map(
+ //   (user) =>
+   //   `<div class="card"><h2>${user.pseudo}</h2> 
+    //<p>${user.age} ans </p> 
+    //<p> ${user.technos.join(" ")}</p>
+    //</div>`
+ // )
+ // .join(" ");
+
+ les dates
