@@ -243,3 +243,29 @@ let arrayNumber = [4, 200, 10, 20, 15];
  console.log(moreData.destVar);
 
  console.log(destVar);
+
+  let array5 = ["js", "php", "ruby"];
+
+  console.log(array5[0]);
+  console.log(array5[1]);
+  console.log(array5[2]);
+
+  const [a, b, c] = array5;
+
+  console.log(a);
+  console.log(b);
+  console.log(c);
+
+  //console.log(iso);
+
+  const dateDestructuring = (chaine) => {
+    let newDate = chaine.split("T")[0];
+    
+    let [y, m, d] = newDate.split("-");
+   // console.log(newDate);
+   return [d, m, y].join(":");
+  }
+
+  console.log(dateDestructuring(iso));
+
+  //les Datatsets
