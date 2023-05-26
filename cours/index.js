@@ -231,3 +231,15 @@ let arrayNumber = [4, 200, 10, 20, 15];
  console.log(dateParser(date));
  console.log(dateParser(timestamp));
  console.log(dateParser(iso));
+
+ // destructuring
+
+ let moreData = {
+    destVar: "quelque chose",
+ }
+
+ const {destVar} = moreData;
+
+ console.log(moreData.destVar);
+
+ console.log(destVar);
