@@ -14,6 +14,10 @@ body {
   align-items: center;
   background: linear-gradient(65deg, #16d9e7, #5ef9a4);
 }
+.pink-gradient {
+  background: linear-gradient(rgb(255, 192, 203), rgb(255, 105, 180));
+}
+
 form {
   width: 50%;
   min-width: 380px;
