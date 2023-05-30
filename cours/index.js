@@ -291,7 +291,11 @@ let mail = "ixyhoo@outlook.fr"
 //console.log(mail.match(/\w/ ));
 //console.log(mail.match(/\W/));
 
-console.log(mail.match(/[\w.-]+@[\w.-]+\.[a-z]{2,6}$/i));
+//console.log(mail.match(/^[\w.-]+@[\w.-]+\.[a-z]{2,6}$/i));
+
+let  separator  = 26652456262
+
+console.log(separator.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
 
 
 
