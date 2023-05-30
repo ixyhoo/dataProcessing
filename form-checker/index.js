@@ -2,6 +2,7 @@ let body = document.querySelector("body");
 document.body.addEventListener("click", function () {
   body.classList.toggle("pink-gradient");
 });
+const form = document.querySelector("form");
 
 const inputs = document.querySelectorAll(
   'input[type="text"], input[type="password"]'
@@ -58,8 +59,10 @@ const passwordChecker = (value) => {
       "The password must contain at least 1 uppercase, 1 lowercase, 8 characters, 1 number and 1 special character."
     );
     progressBar.classList.add("progressRed");
+
     password = null;
   } else if (value.length < 12) {
+    progressBar.classList.remove("progressRed");
     progressBar.classList.add("progressBlue");
     errorDisplay('password', "", true);
     password = value;
@@ -70,10 +73,18 @@ const passwordChecker = (value) => {
     password = value;
     return true;
   }
+  if (confirmPass) confirmChecker(confirmPass);
 };
 
 const confirmChecker = (value) => {
-  console.log(value);
+  if (value !== password) {
+    errorDisplay("confirm", "The passwords are not identical.");
+    confirmPass = null;
+  } else {
+    errorDisplay("confirm", "", true);
+    confirmPass = value;
+    return true;
+  }
 };
 
 inputs.forEach((input) => {
@@ -96,3 +107,28 @@ inputs.forEach((input) => {
     }
   });
 });
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  if (pseudo && email && password && confirmPass) {
+    const data = {
+      pseudo: pseudo,
+      email: email,
+      password: password,
+    };
+    console.log(data);
+    inputs.forEach((input) => (input.value = ""));
+    progressBar.classList.remove("progressBlue", "progressGreen", "progressRed");
+    
+    pseudo = null;
+    email = null;
+    password = null;
+    confirmPass = null;
+    setTimeout(() => {
+      alert("Account created !");
+    }, 1000);
+  } else {
+    alert("Please fill in the form correctly.");
+  }
+});                   
