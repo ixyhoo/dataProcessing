@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(235, 244, 242);
+  background: linear-gradient(65deg, #16d9e7, #5ef9a4);
 }
 form {
   width: 50%;
