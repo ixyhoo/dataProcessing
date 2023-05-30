@@ -6,7 +6,7 @@ document.body.addEventListener("click", function () {
 const inputs = document.querySelectorAll(
   'input[type="text"], input[type="password"]'
 );
-
+const progressBar = document.getElementById("progress-bar");
 let pseudo, email, password, confirmPass;
 
 const errorDisplay = (tag, message, valid) => {
@@ -20,11 +20,14 @@ const errorDisplay = (tag, message, valid) => {
     container.classList.remove("error");
     span.textContent = message;
   }
-}
+};
 
 const pseudoChecker = (value) => {
   if (value.length > 0 && (value.length < 3 || value.length > 20)) {
-    errorDisplay("pseudo", "The pseudo must contain between 3 and 20 characters.");
+    errorDisplay(
+      "pseudo",
+      "The pseudo must contain between 3 and 20 characters."
+    );
     pseudo = null;
   } else if (!/^[a-zA-Z0-9_.-]+$/.test(value)) {
     errorDisplay("pseudo", "The pseudo must not contain special characters.");
@@ -32,7 +35,8 @@ const pseudoChecker = (value) => {
   } else {
     errorDisplay("pseudo", "", true);
     pseudo = value;
-    return true;}
+    return true;
+  }
 };
 
 const emailChecker = (value) => {
@@ -47,7 +51,25 @@ const emailChecker = (value) => {
 };
 
 const passwordChecker = (value) => {
-  console.log(value);
+  
+  if (!value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$/)) {
+    errorDisplay(
+      "password",
+      "The password must contain at least 1 uppercase, 1 lowercase, 8 characters, 1 number and 1 special character."
+    );
+    progressBar.classList.add("progressRed");
+    password = null;
+  } else if (value.length < 12) {
+    progressBar.classList.add("progressBlue");
+    errorDisplay('password', "", true);
+    password = value;
+  } else {
+    progressBar.classList.remove("progressBlue");
+    progressBar.classList.add("progressGreen");
+    errorDisplay('password', "", true);
+    password = value;
+    return true;
+  }
 };
 
 const confirmChecker = (value) => {
