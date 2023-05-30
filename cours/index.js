@@ -287,10 +287,11 @@ let mail = "ixyhoo@outlook.fr"
 //console.log(mail.match(/o/g));  
 //console.log(mail.match(/[zug]/));
 //console.log(mail.match(/[12]/));
-console.log(mail.match(/\d/ ));
-console.log(mail.match(/\w/ ));
-console.log(mail.match(/\W/));
+//onsole.log(mail.match(/\d/ ));
+//console.log(mail.match(/\w/ ));
+//console.log(mail.match(/\W/));
 
-con
+console.log(mail.match(/[\w.-]+@[\w.-]+\.[a-z]{2,6}$/i));
+
 
 
